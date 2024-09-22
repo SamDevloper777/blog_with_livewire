@@ -26,4 +26,12 @@ Route::prefix("admin")->group(function(){
     Route::get("/topics", function(){
         return view("admin.topic");
     })->name("admin.topics");
+
+    Route::get('/post',function(){
+        return view('admin.manage-post');
+    })->name('admin.posts');
+    Route::get('/posts/create',function(){
+        return view('admin.insert-post');
+    })->name('admin.posts.create');
+
 });
