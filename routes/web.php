@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Topic;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -10,11 +11,13 @@ use Illuminate\Support\Facades\Route;
 Route::view("/","home")->name('homepage');
 
 Route::get("/view/{post_id}", function($post_id){
-    return view("singlePost");
+    
+    return view("singlePost",['post_id'=>$post_id]);
 })->name('post.show');
 
-Route::get("/filter", function(){
-    return view("filter");
+Route::get("/filter/{topic_id}", function($topic_id){
+    $topic=Topic::find($topic_id);
+    return view("filter",['topic_id'=>$topic_id,'topic'=>$topic]);
 })->name('filter');
 
 

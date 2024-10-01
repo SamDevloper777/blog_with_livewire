@@ -39,8 +39,8 @@ class InsertForm extends Component
     if($this->featured_image)
     {
         $imageName=time().'.'.$this->featured_image->getClientOriginalExtension();
-        $this->featured_image->storeAs('public/images',$imageName  );
-        $post->featured_image=$imageName;
+        $this->featured_image->storeAs('/public/images',$imageName, "public");
+        $post->  featured_image=$imageName;
     }
     $post->save();
     $this->reset('title','content','featured_image','topic_id');
