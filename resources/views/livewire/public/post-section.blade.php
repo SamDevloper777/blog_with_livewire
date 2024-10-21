@@ -16,7 +16,7 @@
                 </h2>
 
                 <!-- Post Description -->
-                <p class="text-gray-600 line-clamp-6  text-sm mb-4 text-justify">
+                <p class="text-gray-600 line-clamp-5  text-sm mb-4 text-balance">
                     {{$post->content}}
                 </p>
 

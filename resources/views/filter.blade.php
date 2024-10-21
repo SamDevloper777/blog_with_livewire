@@ -5,7 +5,7 @@
   <div class="flex  md:flex-row">
 
     <!-- Filtered Results Section -->
-    <div class="w-full md:w-3/4 flex gap-10">
+    <div class="w-full flex gap-10">
 
 
       <aside class="flex flex-col ">
@@ -15,7 +15,7 @@
 
       <div class="flex flex-1 flex-col">
         <h2 class="text-2xl font-bold text-gray-800 mb-6">Results found {{$topic->topic_name}}</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           @forelse($topic->posts as $post)
           <div class="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
             <img class="w-full h-48 object-cover object-top" src="{{asset('storage/public/images/'.$post->featured_image)}}" alt="Result 1">

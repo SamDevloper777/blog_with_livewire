@@ -5,7 +5,7 @@
     <img class="w-auto h-64 object-cover mb-6" src="{{asset('storage/public/images/'.$post->featured_image)}}" alt=" Post Image">
 
     <!-- Post Title -->
-    <h1 class="text-4xl font-bold text-gray-800 mb-4">{{$post->title}}</h1>
+    <h1 class="text-4xl font-semibold text-gray-800 mb-4">{{$post->title}}</h1>
 
     <!-- Post Metadata -->
     <div class="text-gray-600 mb-6">
@@ -14,13 +14,11 @@
     </div>
 
     <!-- Post Body -->
-    <div class="text-lg text-gray-700 leading-relaxed text-justify">
+    <div class="text-normal text-gray-700 leading-relaxed text-justify">
       <p>
         {{$post->content}}
       </p>
-      <p class="mt-4">
-        Whether you're just starting out or looking to improve your skills, this guide will help you become a better JavaScript developer. We will explore syntax, common patterns, and best practices.
-      </p>
+     
       <!-- Add more post content here -->
     </div>
   </div>

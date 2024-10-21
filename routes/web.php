@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Models\Topic;
 use Illuminate\Support\Facades\Route;
 
@@ -38,3 +39,14 @@ Route::prefix("admin")->group(function(){
     })->name('admin.posts.create');
 
 });
+Route::get("/signup",function(){
+    return view("register");
+})->name('signup');
+Route::get("/login",function(){
+    return view("login");
+})->name('login');
+
+
+Route::get('auth/google', [LoginController::class, 'redirectToGoogle']);
+Route::get('auth/auth_logout',[LoginController::class,'authlogout'])->name('logout');
+Route::get('auth/google/callback', [LoginController::class, 'handleGoogleCallback']);
